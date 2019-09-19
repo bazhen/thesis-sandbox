@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.thesissandbox.web.budgetitem.BudgetItemBrowse"
+        lookupComponent="budgetItemTable"
+        messagesPack="com.company.thesissandbox.web.budgetitem">
+    <dsContext>
+        <collectionDatasource id="budgetItemDs"
+                              class="com.company.thesissandbox.entity.BudgetItem"
+                              view="budgetItem-browse">
+            <query>
+                <![CDATA[select e from sbox$BudgetItem e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="budgetItemTable"
+            spacing="true">
+        <filter id="genericFilter"
+                applyTo="budgetItemTable"
+                datasource="budgetItemDs"
+                stylename="edit-area">
+            <properties include=".*"/>
+        </filter>
+        <table id="budgetItemTable"
+               multiselect="true"
+               presentations="true"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="code"/>
+                <column id="name"/>
+            </columns>
+            <rows datasource="budgetItemDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="budgetItemTable.create"/>
+                <button id="editBtn"
+                        action="budgetItemTable.edit"/>
+                <button id="removeBtn"
+                        action="budgetItemTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <include file="/screens.xml"/>
+    <screen id="sbox$BudgetItem.edit"
+            template="com/company/thesissandbox/web/budgetitem/budgetitem-edit.xml"/>
+    <screen id="sbox$BudgetItem.lookup"
+            template="com/company/thesissandbox/web/budgetitem/budgetitem-browse.xml"/>
+    <screen id="sbox$BudgetItem.browse"
+            template="com/company/thesissandbox/web/budgetitem/budgetitem-browse.xml"/>
+    <screen id="sbox$Invoice.edit"
+            template="com/company/thesissandbox/web/invoice/invoice-edit.xml"/>
+    <screen id="sbox$Invoice.lookup"
+            template="com/company/thesissandbox/web/invoice/invoice-browse.xml"/>
+    <screen id="sbox$Invoice.browse"
+            template="com/company/thesissandbox/web/invoice/invoice-browse.xml"/>
+</screen-config>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="com.company.thesissandbox.web.budgetitem.BudgetItemEdit"
+        datasource="budgetItemDs"
+        messagesPack="com.company.thesissandbox.web.budgetitem">
+    <dsContext>
+        <datasource id="budgetItemDs"
+                    class="com.company.thesissandbox.entity.BudgetItem"
+                    view="budgetItem-edit">
+        </datasource>
+    </dsContext>
+    <layout expand="tabsheet"
+            height="100%"
+            spacing="true"
+            width="100%">
+        <tabSheet id="tabsheet">
+            <tab id="mainTab"
+                 caption="msg://mainTab"
+                 margin="true">
+                <scrollBox id="scrollBox56"
+                           height="100%">
+                    <fieldGroup id="fieldGroup"
+                                datasource="budgetItemDs">
+                        <column width="250px">
+                            <field id="name"/>
+                            <field id="code"/>
+                        </column>
+                    </fieldGroup>
+                </scrollBox>
+            </tab>
+        </tabSheet>
+        <iframe id="windowActions"
+                screen="editWindowActions"/>
+    </layout>
+</window>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+    <view class="com.company.thesissandbox.entity.BudgetItem"
+          extends="_local"
+          name="budgetItem-browse"/>
+    <view class="com.company.thesissandbox.entity.BudgetItem"
+          extends="_local"
+          name="budgetItem-edit"/>
+    <view class="com.company.thesissandbox.entity.Invoice"
+          extends="_local"
+          name="browse">
+        <property name="contractor"
+                  view="_local"/>
+        <property name="budgetItem"
+                  view="_local"/>
+        <property name="createTs"/>
+        <property name="proc"
+                  view="_local"/>
+        <property name="substitutedCreator"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.thesissandbox.entity.Invoice"
+          extends="_local"
+          name="edit">
+        <property name="contractor"
+                  view="_local"/>
+        <property name="budgetItem"
+                  view="_local"/>
+        <property name="proc"
+                  view="_local"/>
+        <property name="procs"
+                  view="card-edit"/>
+        <property name="attachments"
+                  view="card-edit"/>
+        <property name="roles"
+                  view="card-edit"/>
+        <property name="parentCard"
+                  view="card-tree-for-parent"/>
+        <property name="substitutedCreator"
+                  view="user-minimal"/>
+        <property name="category"
+                  view="_minimal"/>
+    </view>
+</views>

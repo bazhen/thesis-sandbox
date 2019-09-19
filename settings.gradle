@@ -1,0 +1,9 @@
+rootProject.name = 'thesis-sandbox'
+include(':sbox-global', ':sbox-core', ':sbox-gui', ':sbox-web', ':sbox-portal', ':sbox-mobile', ':sbox-mobile-rest')
+project(':sbox-global').projectDir = new File(settingsDir, 'modules/global')
+project(':sbox-core').projectDir = new File(settingsDir, 'modules/core')
+project(':sbox-gui').projectDir = new File(settingsDir, 'modules/gui')
+project(':sbox-web').projectDir = new File(settingsDir, 'modules/web')
+project(':sbox-portal').projectDir = new File(settingsDir, 'modules/portal')
+project(':sbox-mobile').projectDir = new File(settingsDir, 'modules/mobile')
+project(':sbox-mobile-rest').projectDir = new File(settingsDir, 'modules/mobile-rest')
